@@ -1,4 +1,5 @@
 import java.awt.Color;
+import java.awt.Graphics;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
@@ -10,7 +11,13 @@ public class YourAdventure extends JComponent implements MouseListener {
 	public static String nameOfApp = "Your Adventure!";
 	
 	
+	public YourAdventure() {
+		addMouseListener(this);
+	}
 	
+	public void paint(Graphics g) {
+	
+	}
 
 	@Override
 	public void mouseClicked(MouseEvent e) {
