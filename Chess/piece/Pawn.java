@@ -5,15 +5,11 @@ import GameLogic.GameMode;
 import java.awt.Toolkit;
 import java.io.IOException;
 
-public class Pawn
-extends ChessPiece
-{
+public class Pawn extends ChessPiece {
 	private String name;
 	private boolean hasMoved;
 
-	public Pawn(int x, int y, int side, String name)
-			throws IOException
-	{
+	public Pawn(int x, int y, int side, String name) throws IOException {
 		super(x, y, side);
 		this.name = name;
 		this.hasMoved = false;
@@ -26,30 +22,21 @@ extends ChessPiece
 
 	public boolean isValid(int x, int y) {
 		if (GameMode.isInBounds(x, y)) {
-
-
-
+	
 		}
-
 
 		return false;
 	}
 
-	public boolean GetHasMoved()
-	{
+	public boolean GetHasMoved() {
 		return this.hasMoved;
 	}
 
-	public void setHasMoved()
-	{
+	public void setHasMoved() {
 		this.hasMoved = true;
 	}
 
-
-	public String getName()
-	{
+	public String getName() {
 		return this.name;
 	}
 }
-
-

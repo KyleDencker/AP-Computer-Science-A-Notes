@@ -3,12 +3,10 @@ package piece;
 import GameLogic.GameBoard;
 import java.awt.Toolkit;
 
-public class Knight extends ChessPiece
-{
+public class Knight extends ChessPiece {
 	private String name;
 
-	public Knight(int x, int y, int side, String name)
-	{
+	public Knight(int x, int y, int side, String name) {
 		super(x, y, side);
 		this.name = name;
 		if (side == 1) {
@@ -18,28 +16,25 @@ public class Knight extends ChessPiece
 		}
 	}
 
-	public boolean isValid(int x, int y)
-	{
+	public boolean isValid(int x, int y) {
 		if (GameLogic.GameMode.isInBounds(x, y)) {
-
+			// if nothing is located at the gameboard
+			if (GameBoard.isLocated(x, y) == -1 || GameBoard.getPiece(x, y).getSide() != getSide()) {
+				return true;
+			}
 		}
 
 		return false;
 	}
 
-
-
-
-	public boolean GetHasMoved()
-	{
+	public boolean GetHasMoved() {
 		return false;
 	}
 
-	public void setHasMoved() {}
+	public void setHasMoved() {
+	}
 
-	public String getName()
-	{
+	public String getName() {
 		return this.name;
 	}
 }
-

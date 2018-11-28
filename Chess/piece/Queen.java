@@ -5,16 +5,11 @@ import GameLogic.GameMode;
 import java.awt.Toolkit;
 import java.io.IOException;
 
-
-public class Queen
-extends ChessPiece
-{
+public class Queen extends ChessPiece {
 	private boolean hasMoved;
 	private String name;
 
-	public Queen(int x, int y, int side, String name)
-			throws IOException
-	{
+	public Queen(int x, int y, int side, String name) throws IOException {
 		super(x, y, side);
 		this.name = name;
 		this.hasMoved = false;
@@ -25,9 +20,8 @@ extends ChessPiece
 	}
 
 	public boolean isValid(int x, int y) {
-		if (GameMode.isInBounds(x, y))
-		{
-
+		if (GameMode.isInBounds(x, y)) {
+			
 		}
 		return false;
 	}
@@ -36,13 +30,10 @@ extends ChessPiece
 		return false;
 	}
 
+	public void setHasMoved() {
+	}
 
-	public void setHasMoved() {}
-
-	public String getName()
-	{
+	public String getName() {
 		return this.name;
 	}
 }
-
-
