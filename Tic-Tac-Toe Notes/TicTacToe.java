@@ -61,6 +61,10 @@ public class TicTacToe extends JComponent implements MouseListener {
 				board[e.getX()/100][e.getY()/100] = Color.green;
 			}
 			turn++;
+			
+			// check to see if someone wins, and if they win then make the entire board that color
+
+			
 			repaint();
 		}
 	}
